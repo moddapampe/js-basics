@@ -7,11 +7,11 @@ function setup() {
 function draw() {
     background("white");
     fill("tomato");
-    rect(5, 5, 160, 160);
+    rect(5, 5, 150, 150);
     fill("yellowgreen")
-    rect(180, 5, 160, 160);
+    rect(180, 5, 150, 150);
     fill("skyblue");
-    rect(5, 180, 160, 160);
+    rect(5, 180, 150, 150);
     fill("orange");
-    rect(180, 180, 160, 160);
+    rect(180, 180, 150, 150);
 }
