@@ -1,24 +1,28 @@
 function setup() {
   createCanvas(800, 600);
+  background('white');
+  noStroke();
 }
 
 function draw() {
-  /*let diameter = random(30);
-  circle(mouseX, mouseY, diameter);
-
-  let diameter2 = random(20);
-  circle(mouseX, mouseY, diameter2);*/
-
-  drawRandomCircle(mouseX, mouseY, 40);
-  drawRandomCircle(mouseX + 10, mouseY + 10, 30);
-  drawRandomCircle(mouseX - 10, mouseY - 10, 20);
-  
+  if (mouseIsPressed) {
+    fireBrush(mouseX, mouseY);
+  }
 }
 
-function drawRandomCircle(x, y, diameter) {
-  diameter = random(diameter);
-  //circle(mouseX, mouseY, diameter);
+function fireBrush(x, y) {
+  x = y + random(-200, 200);
+  y = y + random( -200, 200);
+let diameter = random(10, 30);
+let green = 0;
+let opacity = 100;
+
+if (diameter < 20) {
+  opacity = random(10, 40);
+  } else {
+    green = random(100, 200);
+    opacity = random(40, 70);
+  }
+  fill(random(200, 255), green, 0, opacity);
   circle(x, y, diameter);
-  fill(random(255), random(255), random(255));
 }
-
