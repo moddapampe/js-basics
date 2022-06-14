@@ -145,3 +145,25 @@ if(mouseIsPressed === false) {
 if(!mouseIsPressed) {
   background('white');    --> with logical NOT (i.e '!true' = false, '!false' = true)
 }
+
+# Implicit Coercions
+
+## implicit coercions makes programmers hate JavaScript
+
+## implicit coercions can cause tricky errors 
+
+### be careful when using the equality operator because of the implicit coercions that happen under the hood
+  
+  - In JavaScript it is possible to compare values of different types
+  - JavaScript will automatically convert values
+    - ...known as Implicit Coercions (Typenunsicherheit!)
+
+### example:
+
+true == 1     --> true
+
+true == "1"   --> true
+
+false == "0"  --> true
+
+false == ""   --> also true uha
