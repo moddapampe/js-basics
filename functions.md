@@ -48,3 +48,25 @@ function draw() {
     - function names should describe what they do
     - if a function name contains the word *and*, it does too much... :)
       - i.e. calculateRandomColorAndDrawCircle()
+
+
+# Switch-Case Statements, Text and Keyboaard Input
+    - We need interaction with the user
+    - Switch.- case is used to replace too long if<>else- statements
+
+### example: 
+
+funtion draw() {
+    switch(key) {
+        case "1":
+        case "2":
+        fill('dodgerblue');
+        break;
+        case "3":
+        fill('salmon');
+        break;
+        default:
+        fill('white');
+    }
+    circle(mouseX, mouseY, 20);
+}
