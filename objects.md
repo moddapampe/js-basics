@@ -69,4 +69,24 @@ person.name = "Peter"; // person stays const, key changed to "Peter"
 
 ### if the *key* is NOT defined before, JavaScript would deploy it as a new one.
 
-person.age = 42; // person also stays const, key is now age
+person.age = 42; // person also stays const, key is now age of 42
+
+
+# Deleting keys from objects
+
+### example 
+
+const obj = {};
+obj.name = "Nico";
+console.log(obj.name);
+
+delete obj.name;
+console.log(obj.name);
+
+### result: 
+
+"Nico"
+undefined  // no more defined
+
+
+# Increment and Decrement (...and Excrement[!]) *mwahahaha xD
