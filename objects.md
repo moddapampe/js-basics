@@ -51,3 +51,22 @@ function draw() {
 let emptyObject = {};
 
 let person = {name: "Peter", Age: 42}; // {key: "value"};
+
+
+# Adding Keys to Objects
+
+## new keys can be added like this.
+    - new keys can be added to objects dynamically
+    - adding any key does  not change the object
+      - works with *const*
+    - i.e. its not possible to change the const itself, BUT u can change their given keys anytime
+
+### example:
+
+const person = {}; // const with empty object
+
+person.name = "Peter"; // person stays const, key changed to "Peter"
+
+### if the *key* is NOT defined before, JavaScript would deploy it as a new one.
+
+person.age = 42; // person also stays const, key is now age
