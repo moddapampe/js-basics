@@ -72,7 +72,7 @@ person.name = "Peter"; // person stays const, key changed to "Peter"
 person.age = 42; // person also stays const, key is now age of 42
 
 
-# Deleting keys from objects
+## Deleting keys from objects
 
 ### example 
 
@@ -90,3 +90,21 @@ undefined  // no more defined
 
 
 # Increment and Decrement (...and Excrement[!]) *mwahahaha xD
+    - nummeric variablen can be in- or just decremented by using similar (i.e. *increment*, *decrement*) operators
+    - add 1 to a numeric variable, do it like this: variableName++
+    - to decrease, or substract 1 from a numeric variable, like this: variableName--
+
+### example:
+
+let brush = {
+    x: 0;
+    y: 666  // that value would make it more evil //
+};
+
+function draw() {
+    circle(brush.x, brush.y, 30);
+    // increase
+    brush.x++
+    // to decrease
+    brush.y--;
+}
