@@ -30,6 +30,7 @@ function setup() {
   let cometCount = random(6,12);
   for (let i = 0; i < cometCount;i++) {
     createRandomComet();
+    
   };
 }
 
