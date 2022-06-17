@@ -73,5 +73,27 @@ do {
 } while(counter < 5);
 
 
+# the *while*- loop
 
+## another loop is the *while*- loop
+    - the *while*- loop is executed as long as the while condition is *true*
+    - the while- block will be only entered if the while condition is true
+
+
+### example:
+
+let counter = 0;
+
+while(counter < 5>) {
+    console.log(coiunter);
+    counter++;
+}
+
+### bad example:
+
+while(true) {
+    console.log("fooooo!");
+}
+
+its called endless loop - this will definitly crash ur browser *mwahahahaha :D
 
