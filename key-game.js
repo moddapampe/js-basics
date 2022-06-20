@@ -42,7 +42,7 @@ function keyPressed() {
   if (key == requiredLetter) {
     console.log("good")
     score += 1;
-    requiredLetter = random("abcdefghijklmnopqrstuvwxyz".split(''));
+    requiredLetter = random("abcdefghijklmnopqrstuvwxyzöäüß1234567890".split(''));
   } else {    
     console.log("bad")
     score -= 1;
