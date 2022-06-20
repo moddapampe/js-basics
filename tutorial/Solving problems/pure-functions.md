@@ -31,10 +31,17 @@
 
 ### example:
 
-let sum = 0;
+let sum = 0;                    // cruel side-effect
 
 function multiply(a, b);        // input = parameters
     const result = a * b;       // the logical thing
     sum = result;               // output as a return
 
     return result;
+
+
+# Code Structure of (pure) functions
+
+    - define variables needed for the Task
+    - processing of data
+    - return of a result
