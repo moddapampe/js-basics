@@ -1,6 +1,6 @@
 function setup() {
     createCanvas(400, 400);
-
+}
   
   function draw() {
     background(220);
@@ -8,6 +8,7 @@ function setup() {
 
       let coordinates = mouseX + "," + mouseY;
       text(coordinates, mouseX, mouseY);
+      circle(mouseX, mouseY, 5)
     }
   }
   
