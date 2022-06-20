@@ -6,8 +6,8 @@ function setup() {
     background(220);
     if (mouseIsPressed) {
 
-      let coordinates = mouseX + "," + mouseY;
-      text(coordinates, mouseX, mouseY);
+      let coords = mouseX + "," + mouseY;
+      text(coords, mouseX, mouseY);
       circle(mouseX, mouseY, 5)
     }
   }
