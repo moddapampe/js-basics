@@ -12,7 +12,7 @@ function draw() {
   
   if(posY > 200) {
     posY = 0;
-    speed = speed ++ 1;
+    speed = speed + .5;
   } 
   
   posY = posY + speed;
