@@ -1,12 +1,12 @@
-let posX = 50;
-let posY = 50;
-let speedX = 2;
-let speedY = 3;
 
+
+let speedY = 3;
+let posX = 50;
+let speedX = 2;
+let posY = 50;
 function setup() {
   createCanvas(400, 400);
 }
-
 function draw() {
   background(220);
   fill('red')
