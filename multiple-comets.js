@@ -1,39 +1,58 @@
 let canvasBase = 600;
 
-let comet1 = {
-  x: 0,
-  y: 20,
-  diameter: 50,
-  velocity: 1,
+let comets = [];
+
+function createRandomComet() {
+  let comet = {
+    x: randomStartX(),
+    y: randomStartY(),
+    diameter: random(5, 60),
+    velocity: random([1, 2, 3])
+  };
+  comets.push(comet);
 }
-let comet2 = {
-  x: 50, 
-  y: 25,
-  diameter: 20,
-  velocity: 1.25
+
+function randomStartX() {
+  return random(0, canvasBase / 2);
 }
+
+function randomStartY() {
+  return random(0, canvasBase / 2);
+}
+
 
 function setup() {
   createCanvas(canvasBase, canvasBase);
   background("black");
   fill("orange");
   noStroke();
+
+  let cometCount = random(6,12);
+  for (let i = 0; i < cometCount;i++) {
+    createRandomComet();
+    
+  };
 }
 
 function draw() {
-  background(0, 0, 0, 25);
-  renderComet(comet1, canvasBase);
-  renderComet(comet2, canvasBase);
+  background(0,0,0,10);
+
+  for (let i = 0; i < comets.length; i++) {
+    renderComet(comets[i], canvasBase);
+  }
 }
 
-function renderComet(comet, threshold) {
+function renderComet(comet,treshold) {
+  treshold = treshold + comet.diameter;
+
   comet.x = comet.x + comet.velocity;
   comet.y = comet.y + comet.velocity;
 
-  circle(comet.x, comet.y, comet.diameter);
+circle(comet.x, comet.y, comet.diameter);
 
-  if (comet.x > threshold || comet.y > threshold) {
-    comet.x = random(0, 100);
-    comet.y = 0;
-  }
+if (comet.x > treshold || comet.y > treshold) {
+  comet.x = randomStartX();
+  comet.y = randomStartY;
+}
+
 }
