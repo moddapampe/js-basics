@@ -7,10 +7,10 @@ function setup() {
 
 function draw() {
   background(220);
-  fill('red')
+  fill(random(200, 255));
   circle(posX, posY, 30);
   
-  if(posX < 200) {
+  if(posX < 400) {
     posX = posX + 1;
   } 
 }
