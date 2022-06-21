@@ -75,3 +75,47 @@ console.log(wordsArr);                      // ["I", "like", "cats"]
 const word = "banana";
 const charArr = word.split("");
 console.log(charArr);                       // ["b", "a", "n", "a", "n", "a"]
+
+# indexOf();
+
+## the indexOf(); method will return the first index of a search string starting from a specific index
+
+### example:
+
+const sentence = "i love ice";
+
+const firstIndex = sentence.indexOf(" ");
+console.log(firstIndex);                    // 1. space found
+
+const secondIndex = sentence.indexOf(" ", firstIndex + 1); // +1 means it searches after the 1. found space
+console.log(secondIndex);                   // space found on 6
+
+const charAt4 = sentence[4];                // --> "o"
+"0123456789"                                // remind: 0123 is like 1234 in position
+"i_love_ice"
+
+const sentence = "i love ice";
+
+const indes = sentence.indexOf("x");
+console.log(index);                         // return -1, cause its not there
+
+
+# string.repeat();
+
+const ha = "ha";
+const laughing = ha.repeat(10);
+
+console.log(laughing);                      // "hahahahahahahahahaha" (10 times)
+
+
+# toLowerCase(); & toUpperCase();
+
+### example usage of string casing methods
+
+const sentence = "i am batman"
+
+sonst sentenceUpper = sentence.toUpperCase();
+console.log(sentenceUpper);                 // I AM BATMAN
+
+const sentenceLower = toLowerCase();
+console.log(sentenceLower);                 // i am batman
