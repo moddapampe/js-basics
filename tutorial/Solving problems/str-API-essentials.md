@@ -49,7 +49,29 @@ console.log(isIncluded);                    // False (car = true)
 # string.replace()
     - the string.replace();- method returns a new string with a replacement of the first match of a pattern replaced by a replacement
     - tl;DR -> replace a string of a larger string with another string
-    - it only replaces the first occurance af the search string / pattern
+    - it only replaces the first occurence af the search string / pattern
 
 ### example usage of string.replace();
 
+const str = "cats and dogs";
+
+const resultStr = str.replace("cats", "snails");  // "cats" would be replaced by "snails"
+
+console.log(str);                           // cats cats dogs
+console.log(resultStr);                     // snails cats dogs
+
+
+# string.split
+
+## the *string.split();*-method divides a string into an array using a seperator
+## if no seperator or an empty string is used, a string is splitted into an single character array
+
+### example usage of *string.split();*
+
+const sentence = "I like cats";
+const wordsArr = sentence.split(" ");
+console.log(wordsArr);                      // ["I", "like", "cats"]
+
+const word = "banana";
+const charArr = word.split("");
+console.log(charArr);                       // ["b", "a", "n", "a", "n", "a"]
