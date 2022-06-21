@@ -54,4 +54,28 @@ const is4Included = arr.includes(4);
 console.log(is4Included);       // nope, false :)
 
 
+# array.forEach(); - do something with each array item using array.forEach();
 
+## using array.forEach() can usually replace a for-loop
+
+## the array.forEach();-method executes a provided function once for each array element
+## the provided function is executed once for each array item that's passed as the first argument (parameter)
+
+### example:
+
+const arr = ["peter, paul, mary"];
+
+function sayHello(name) {
+    console.log("Hello" + name);
+}
+
+arr.forEach(sayHello);              /* "Hello peter"
+                                        "Hello paul"
+                                        "Hello mary" */
+
+
+# filtering array with array.filter();
+
+## the array.filter(filterFn);-method returns a new array with all (filtered) elements that passed the provided test function
+
+## the test function needs to return *true* or *false* determinig if the current array item passed the test
