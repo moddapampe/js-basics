@@ -70,3 +70,16 @@ function checkMaxLength(str, length) {
      
     - can be used in all sorts of projects
     - code is reusable
+
+# WARNING: COPIED CODE IS ABSOLUTE EVIL!!1 :D
+## use functions, use libraries, use brain
+
+
+# Disadvantages
+
+    - none *lol
+    - when the scope of function grows -> readability
+
+### explanation: if ur project grows up and gets bigger n bigger, then make sure that ur functions are not trying building unreal things
+
+# never forget this sentence: +++ it depends on +++
