@@ -45,3 +45,28 @@ function multiply(a, b);        // input = parameters
     - define variables needed for the Task
     - processing of data
     - return of a result
+
+## a pure function can normally be devided into three parts
+
+    - nessecary variables
+    - actual logic
+    - return statement
+
+### example:
+
+function checkMaxLength(str, length) {
+    let result = undefined      // varables need for the task
+
+    if (str.length <= maxLength) {
+        result = true;
+    } else {                    // data processing and logic
+        result = false;
+    }
+    return result;              // self declaring :)
+}
+
+
+# Advantages
+     
+    - can be used in all sorts of projects
+    - code is reusable
