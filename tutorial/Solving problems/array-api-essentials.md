@@ -79,3 +79,36 @@ arr.forEach(sayHello);              /* "Hello peter"
 ## the array.filter(filterFn);-method returns a new array with all (filtered) elements that passed the provided test function
 
 ## the test function needs to return *true* or *false* determinig if the current array item passed the test
+
+## the array.filter();-method returns a new filtered array
+
+### example:
+
+const arr = ["peter", "paul", "mary"];
+
+function filter(name) {
+    return name.length < 5;
+}
+
+const filteredArr = arr.filter(filter);
+console.log(filterdArr);                // result: ["paul", "mary"]
+
+
+# transforming array items with array.map();
+
+## the array.map(mapFn);-method produces a new array with possible other values returned by the map function
+##
+## the map function is called for every item and value return from that function which is used in the new array 
+
+## the array.map ();-method is usually used to transform the data of an array
+
+### example:
+
+const arr = [2,4,5,7];
+
+function square(n) {
+    return n * n;
+}
+
+const squaredArr = arr.map(square);
+console.log(squaredArr);                // result: [4,16,25,49]
