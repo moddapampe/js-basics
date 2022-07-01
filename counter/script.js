@@ -1,22 +1,31 @@
-window.onload = function () {
-    let clickDiv = document.getElementById("click");
-    clickDiv.onclick = incrementClick;
+const counterElement = document.getElementById("counter")
+const clickAreaElement = document.getElementById("click-area")
+const resetButton = document.querySelector("header > button")
 
-    let resetBtn = document.getElementById("reset");
-    resetBtn.onclick = resetCounter;
+let counter = 0
+
+function setBgSize (counter) {
+  clickAreaElement.style.backgroundSize = counter + "%"
 }
 
-let counterVal = 0;
-
-incrementClick = function() {
-    updateDisplay(++counterVal);
+function countUp () {
+  setBgSize(counter)
+  counterElement.textContent = counter++
 }
 
-function resetCounter() {
-    counterVal = 0;
-    updateDisplay(counterVal);
+function reset () {
+  counter = 0;
+  counterElement.textContent = counter
+  setBgSize(counter)
 }
 
-function updateDisplay(val) {
-    document.getElementById("counter").innerHTML = val;
-}
+clickAreaElement.addEventListener("click", countUp)
+document.addEventListener("keyup", (event) => {
+  if (event.code === "Space" || event.code === "Enter") {
+    countUp()
+  }
+})
+
+resetButton.addEventListener("click", reset)
+
+countUp()
