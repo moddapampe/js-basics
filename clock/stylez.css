@@ -11,7 +11,8 @@
     display: block;
     width:10em;
     height: 10em;
-    border: 2px solid black;
+    background-color: darkorange;
+    border: 10px solid black;
     border-radius: 50%;
     margin: auto;
     margin-top: 2em;
@@ -70,9 +71,9 @@
   #digiclock {
     display: flex;
     font-size: 5em;
-    width: 3.55em;
+    width: 5em;
     height: 1.125em;
-    margin: auto;
+    margin: auto auto;
     margin-top: 1em;
     text-align: center;
     border: 2px solid black;
