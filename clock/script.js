@@ -1,36 +1,43 @@
-function updateTime() {
-    const date = new Date();
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
-  
-    // digi clock
-    document.querySelector(".digihours").innerText =
-      formatNumberString(hours);
-    document.querySelector(".digiminutes").innerText =
-      formatNumberString(minutes);
-    document.querySelector(".digiseconds").innerText =
-      formatNumberString(seconds);
-  
-    // classic clock
-    const hoursEl = document.querySelector(".analoghours");
-    hoursEl.style.setProperty("--hours", hours * 30 + "deg");
-  
-    const minutesEl = document.querySelector(".analogminutes");
-    minutesEl.style.setProperty("--minutes", minutes * 6 + "deg");
-  
-    const secondsEl = document.querySelector(".analogseconds");
-    secondsEl.style.setProperty("--seconds", seconds * 6 + "deg");
-  
-    document
-      .querySelectorAll(".digidots")
-      .forEach((e) => e.classList.toggle("digidots--hidden"));
-  }
-  
-  function formatNumberString(n) {
-    let s = "0" + n.toString();
-    return s.slice(-2);
-  }
-  
-  updateTime();
-  setInterval(updateTime, 1000);
+const hourHand = document.getElementById("hour-hand");
+const minuteHand = document.getElementById("minute-hand");
+const secondHand = document.getElementById("second-hand");
+
+window.setInterval(function() {
+  let currentTime = new Date();
+  let h = currentTime.getHours();
+  let m = currentTime.getMinutes();
+  let s = currentTime.getSeconds();
+
+  hourDeg = 180 + h * 30 + m * 0.5;
+  minuteDeg = 180 + m * 6;
+  secondDeg = 180 + s * 6;
+
+  hourHand.style.transform = "rotate(" + hourDeg + "deg)";
+
+  minuteHand.style.transform = "rotate(" + minuteDeg + "deg)";
+
+  secondHand.style.transform = "rotate(" + secondDeg + "deg)";
+}, 1000);
+
+
+// ------------------------- digital -----------------------------//
+
+setInterval(showTime, 1000);
+        function showTime() {
+            let time = new Date();
+            let hour = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+
+            hour = hour < 10 ? "0" + hour : hour;
+            min = min < 10 ? "0" + min : min;
+            sec = sec < 10 ? "0" + sec : sec;
+ 
+            let currentTime = hour + ":"
+                + min + ":" + sec;
+ 
+            document.getElementById("digiclock")
+                .innerHTML = currentTime;
+        }
+ 
+        showTime();

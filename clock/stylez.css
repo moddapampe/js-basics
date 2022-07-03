@@ -1,7 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
-body{
-    background-color: darkgreen;
-    font-size: 30px;
-    font-family: 'Anton', sans-serif;
-}
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #clock {
+    position: relative;
+    display: block;
+    width:10em;
+    height: 10em;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 2em;
+  }
+  
+  #center {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    background-color: rgb(154, 44, 44);
+    z-index: 3;
+  }
+  
+  #second-hand {
+    display: block;
+    width: 3px;
+    height: 40%;
+    background-color: rgb(154, 44, 44);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(180deg);
+    transform-origin: top;
+    z-index: 2;
+  }
+  
+  #minute-hand {
+    display: block;
+    width: 5px;
+    height: 35%;
+    background-color: rgb(60, 60, 60);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(180deg);
+    transform-origin: top;
+    z-index: 1;
+  }
+  
+  #hour-hand {
+    display: block;
+    width: 7px;
+    height: 30%;
+    background-color: rgb(72, 72, 72);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(180deg);
+    transform-origin: top;
+  }
+  
+  #digiclock {
+    font-size: 1em;
+    width: auto;
+    height: 5em;
+    margin: .5em;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    color:black
+  }
