@@ -1,4 +1,3 @@
-
 function changeColor(){
     let red = document.getElementById('sliderRed').value;
     let green = document.getElementById('sliderGreen').value;
