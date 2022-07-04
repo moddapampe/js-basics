@@ -70,12 +70,11 @@
   
   #digiclock {
     display: flex;
-    font-size: 5em;
-    width: 5.5em;
+    font-size: 3em;
+    width: 15vw;
     height: 1.125em;
-    margin: auto auto;
-    margin-top: 1em;
-    padding: .5em;
+    margin:auto;
+    align-items: center;
     text-align: center;
     border: 2px solid black;
     border-radius: 8px;
