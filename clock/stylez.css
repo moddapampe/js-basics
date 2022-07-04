@@ -71,7 +71,7 @@
   #digiclock {
     display: flex;
     font-size: 3em;
-    width: 15vw;
+    width: 5em;
     height: 1.125em;
     margin:auto;
     align-items: center;
@@ -81,3 +81,23 @@
     color: green;
     background-color: black;
   }
+
+  .recwrapper {
+    margin-left: .5em;
+    margin-top: .5em;
+  }
+
+  #rec {
+    float: left;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: red;
+  }
+  
+  #label {
+    font-weight: bold;
+    font-family: Arial;
+    margin-left: 22px;
+  }
+  

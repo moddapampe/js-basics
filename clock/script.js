@@ -41,3 +41,12 @@ setInterval(showTime, 1000);
         }
  
         showTime();
+
+  let counter = 0,
+  reddot = ['none', 'block'],
+  el_rec = document.querySelector('#rec'),
+  interval = setInterval(() => {
+    counter++ % (2016 / (12 * 24)) === 0 &&
+    reddot.unshift(reddot.pop()) &&
+    (el_rec.style.display = reddot[0]);
+  }, 128);
