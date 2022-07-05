@@ -1,40 +1,53 @@
+const btnAdd = document.querySelector("#add-todo");
 const state = {
-    todos: [
-        { description: "learn to walk", done: true },
-        { description: "learn to run", done: false },
-        { description: "learn to fly", done: false },
-    ],
-}
-
-function renderTodos() {
-    const list = document.querySelector('#list');
-    list.innerHTML = "";
-
-    state.todos.forEach(todo => {
-        const todoLi = document.createElement("li");
-
-        todoLi.todoObj = todo;
-
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.checked = todo.done;
-        todoLi.appendChild(checkbox);
-
-        const todoText = document.createTextNode(todo.description);
-        todoLi.append(todoText);
-
-        list.appendChild(todoLi);
-    });
-}
+    todos: [],
+};
 
 renderTodos();
 
-const list = document.querySelector('#list');
-list.addEventListener("change", (e) => {
-    const checkbox = e.target;
-    const LiElement = checkbox.parentElement;
-    const todo = LiElement.todoObj;
+function renderTodos() {
+    const list = document.querySelector("#list");
+    list.innerText = "";
 
-    todo.done = checkbox.checked;
+    state.todos.forEach((todo) => {
+        const listEl = document.createElement("li");
 
-});
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+
+        checkbox.addEventListener("change", (event) => {
+            changeTodoState(event, todo);
+        });
+
+        const text = document.createElement("p");
+        text.innerText = todo.description;
+
+        listEl.append(checkbox, text);
+        list.append(listEl);
+    });
+}
+
+function changeTodoState(e, el) {
+    const todoDoneState = e.target.checked;
+    el.done = todoDoneState;
+}
+
+btnAdd.addEventListener("click", addTodo);
+
+function addTodo() {
+    const todoText = document.querySelector("#todo-description");
+    const description = todoText.value;
+
+    const todo = new Todo(description);
+
+    state.todos.push(todo);
+
+    renderTodos();
+    todoText.value = "";
+}
+
+class Todo {
+    constructor(description) {
+        (this.description = description), (this.done = false);
+    }
+}
