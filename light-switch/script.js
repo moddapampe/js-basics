@@ -1,9 +1,13 @@
-document.getElementById('switch').addEventListener('click', function() {
-    if (this.classList.contains('off')) {
+const button = document.querySelector("button");
+const body = document.querySelector("body");
 
-      this.classList.remove('off');
-    } else {
-      this.classList.add('off');
-    }
-  });
-  
+button.addEventListener("click", (e) => {
+  if (document.title === "Good Morning") {
+      document.title = "Good Night";
+  } else {
+    document.title = "Good Morning";
+  }
+  button.classList.toggle("button-dark");
+  body.classList.toggle("body-dark");
+});
+
