@@ -1,15 +1,26 @@
-const btn = document.querySelector('button');
-const randomQuote = document.querySelector('randomquote')
+let btn = document.querySelector("button");
+let randomQuote = document.querySelector("p");
+let author = document.querySelector("small");
 
 
-btn.addEventListener("click", function() {
-  
-  const p = document.querySelector("p");
-  fetch('https://quote-garden.herokuapp.com/api/v3/quotes/random')
-  .then(response => response.json())
 
-  .then(data => { 
-    p.innerText = "test", data.quoteText;  
-    console.log(data);
+
+
+fetch("https://quote-garden.herokuapp.com/api/v3/quotes/random")
+  .then((response) => {
+    return response.json();
+  })
+  .then((randomObject) => {
+    randomQuote.innerText = randomObject.data[0].quoteText + ", " + randomObject.data[0].quoteAuthor;
+     ", " + randomObject.data[0].quoteAuthor;
   });
+
+btn.addEventListener("click", () => {
+  fetch("https://quote-garden.herokuapp.com/api/v3/quotes/random")
+    .then((response) => {
+      return response.json();
+    })
+    .then((randomObject) => {
+      randomQuote.innerText = randomObject.data[0].quoteText + ", " + randomObject.data[0].quoteAuthor;
+    });
 });
