@@ -2,11 +2,25 @@
 
 body {
     box-sizing: border-box;
-    border: 2px solid red;
-    height: 100vh;
-    width: auto;
+    
+}
+
+section {
+    border: 2px solid green;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin-top: -5em;
+    background-color: #FFDC69;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 75%;    
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    justify-content: center;
     font-family: 'Rock Salt', cursive;
 }
+
 
 h1 {
     text-align: center;
@@ -14,7 +28,6 @@ h1 {
 
 div {
     display: flex;
-    border: 2px solid green;
     margin: auto;
     justify-content: center;
     width: 75em;
@@ -24,7 +37,6 @@ div > button {
     width: 20em;
     height: 8em;
     margin: 3.5em;
-    border: 1px solid black;
     border-radius: 5%;
     color: white;
     background-color: blue;
