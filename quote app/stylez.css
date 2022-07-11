@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Rock+Salt&display=swap');
+
+body {
+    box-sizing: border-box;
+    border: 2px solid red;
+    height: 100vh;
+    width: auto;
+    font-family: 'Rock Salt', cursive;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    display: flex;
+    border: 2px solid green;
+    margin: auto;
+    justify-content: center;
+    width: 75em;
+}
+
+div > button {
+    width: 20em;
+    height: 8em;
+    margin: 3.5em;
+    border: 1px solid black;
+    border-radius: 5%;
+    color: white;
+    background-color: blue;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+div > p {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 2.5em;
+    height: auto;
+    width: 50em;
+}
