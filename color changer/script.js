@@ -9,7 +9,7 @@ function changeColor(){
     let color = 'rgb(' + red + ',' + green + ',' + blue + ')';
 
     document.body.style.backgroundColor = color;
-    document.getElementById('colorOutput').innerHTML = ': ' + color;
+    document.getElementById('colorOutput').innerHTML = ' ' + color;
 }
 
 document.getElementById('sliderRed').addEventListener('input',changeColor);
@@ -29,17 +29,17 @@ randomButton.addEventListener('click' , () => {
       document.getElementById('colorOutput').innerHTML =
         randomObject.rgb.r + ", " + randomObject.rgb.g + ", " + randomObject.rgb.b;
 
-      let = valueBlue = String(randomObject.rgb.r);
+      let = valueRed = String(randomObject.rgb.r);
       let = valueGreen = String(randomObject.rgb.g);
       let = valueBlue = String(randomObject.rgb.b);
 
 
 
-      document.getElementById('sliderRed').addEventListener('input',changeColor);
-      document.getElementById('sliderGreen').addEventListener('input',changeColor);
-      document.getElementById('sliderBlue').addEventListener('input',changeColor);
+      document.getElementById('sliderRed').addEventListener('input', valueRed);
+      document.getElementById('sliderGreen').addEventListener('input', valueGreen);
+      document.getElementById('sliderBlue').addEventListener('input', valueBlue);
       
-      let rgb ="rgb(" +valueBlue + "," + valueGreen + "," + valueBlue + ")";
+      let rgb ="rgb(" +valueRed + "," + valueGreen + "," + valueBlue + ")";
         
         
        
