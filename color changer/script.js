@@ -27,11 +27,11 @@ randomButton.addEventListener('click' , () => {
     
     .then((randomObject) => {
       document.getElementById('colorOutput').innerHTML =
-        randomObject.red + ", " + randomObject.green + ", " + randomObject.blue;
+        randomObject.rgb.r + ", " + randomObject.rgb.g + ", " + randomObject.rgb.b;
 
-      let = valueBlue = String(randomObject.red);
-      let = valueGreen = String(randomObject.green);
-      let = valueBlue = String(randomObject.blue);
+      let = valueBlue = String(randomObject.rgb.r);
+      let = valueGreen = String(randomObject.rgb.g);
+      let = valueBlue = String(randomObject.rgb.b);
 
 
 
