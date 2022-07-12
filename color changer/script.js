@@ -29,9 +29,9 @@ randomButton.addEventListener('click' , () => {
       document.getElementById('colorOutput').innerHTML =
         randomObject.rgb.r + ", " + randomObject.rgb.g + ", " + randomObject.rgb.b;
 
-      let = valueRed = String(randomObject.rgb.r);
-      let = valueGreen = String(randomObject.rgb.g);
-      let = valueBlue = String(randomObject.rgb.b);
+      let valueRed = String(randomObject.rgb.r);
+      let valueGreen = String(randomObject.rgb.g);
+      let valueBlue = String(randomObject.rgb.b);
 
 
 
