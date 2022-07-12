@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
 
+body {
+    box-sizing: border-box;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: auto;
+   border-radius: 12px;
+   padding: .5em;
+   align-items: center;
+   align-self: center;
+   justify-content: center;
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
 #colchange {
     background-color: #8C8038;
     font-family: 'Freckle Face', cursive;
@@ -9,10 +26,18 @@
 
 h1 {
     color:gold;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    
 }
 
 p {
-    color: wheat;
+    color: rgb(161, 40, 177);
+    text-align: center;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
 }
 
 li {
@@ -21,13 +46,18 @@ li {
 }
 
 #payme {
-    height: 50px;
-    width: 150px;
+    height: 2em;
+    width: 6em;
     background-color: greenyellow;
-    color: black;
+    color: rgb(21, 151, 190);
     font-weight: 800;
     font-size: 1em;
     text-align: center;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Freckle Face', cursive;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
+    
 }
