@@ -35,9 +35,9 @@ randomButton.addEventListener('click' , () => {
 
 
 
-      document.getElementById('sliderRed').addEventListener('input',changeColor).valueRed;
-      document.getElementById('sliderGreen').addEventListener('input',changeColor).valueGreen;
-      document.getElementById('sliderBlue').addEventListener('input',changeColor).valueBlue;
+      document.getElementById('sliderRed').addEventListener('input',changeColor);
+      document.getElementById('sliderGreen').addEventListener('input',changeColor);
+      document.getElementById('sliderBlue').addEventListener('input',changeColor);
       
       let rgb ="rgb(" +valueRed + "," + valueGreen + "," + valueBlue + ")";
         
