@@ -16,7 +16,7 @@ document.getElementById('sliderBlue').addEventListener('input',changeColor);
 
 let randomButton = document.getElementById('payme');
 
-randomButton.addEventListener("click", () => {
+randomButton.addEventListener('click' , () => {
   fetch("https://dummy-apis.netlify.app/api/color")
     
   .then((response) => {
