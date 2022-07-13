@@ -2,21 +2,21 @@
 
 
 function changeColor() {
-    let red = document.getElementById('sliderRed').value;
-    let green = document.getElementById('sliderGreen').value;
-    let blue = document.getElementById('sliderBlue').value;
+    let red = document.querySelector('#sliderRed').valueRed;
+    let green = document.querySelector('#sliderGreen').valueGreen;
+    let blue = document.querySelector('#sliderBlue').valueBlue;
 
     let color = 'rgb(' + red + ',' + green + ',' + blue + ')';
 
     document.body.style.backgroundColor = color;
-    document.getElementById('colorOutput').innerHTML = ' ' + color;
+    document.querySelector('#colorOutput').innerHTML = ' ' + color;
 }
 
-document.getElementById('sliderRed').addEventListener('input', changeColor);
-document.getElementById('sliderGreen').addEventListener('input', changeColor);
-document.getElementById('sliderBlue').addEventListener('input', changeColor);
+document.querySelector('#sliderRed').addEventListener('input', changeColor);
+document.querySelector('#sliderGreen').addEventListener('input', changeColor);
+document.querySelector('#sliderBlue').addEventListener('input', changeColor);
 
-let randomButton = document.getElementById('payme');
+let randomButton = document.querySelector('#payme');
 
 randomButton.addEventListener('click', () => {
     fetch("https://dummy-apis.netlify.app/api/color")
@@ -26,16 +26,16 @@ randomButton.addEventListener('click', () => {
     })
 
     .then((randomObject) => {
-        document.getElementById('colorOutput').innerHTML =
+        document.querySelector('#colorOutput').innerHTML =
             randomObject.rgb.r + ", " + randomObject.rgb.g + ", " + randomObject.rgb.b;
 
         let valueRed = String(randomObject.rgb.r);
         let valueGreen = String(randomObject.rgb.g);
         let valueBlue = String(randomObject.rgb.b);
 
-        document.getElementById('sliderRed').value = valueRed;
-        document.getElementById('sliderGreen').value = valueGreen;
-        document.getElementById('sliderBlue').value = valueBlue;
+        document.querySelector('#sliderRed').value = valueRed;
+        document.querySelector('#sliderGreen').value = valueGreen;
+        document.querySelector('#sliderBlue').value = valueBlue;
 
         let rgb = "rgb(" + valueRed + "," + valueGreen + "," + valueBlue + ")";
 
