@@ -33,15 +33,11 @@ randomButton.addEventListener('click', () => {
         let valueGreen = String(randomObject.rgb.g);
         let valueBlue = String(randomObject.rgb.b);
 
-
-
         document.getElementById('sliderRed').value = valueRed;
         document.getElementById('sliderGreen').value = valueGreen;
         document.getElementById('sliderBlue').value = valueBlue;
 
         let rgb = "rgb(" + valueRed + "," + valueGreen + "," + valueBlue + ")";
-
-
 
         document.body.style.backgroundColor = rgb;
     });
